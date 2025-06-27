@@ -1,0 +1,6 @@
+Flask
+pandas
+matplotlib
+mysql-connector-python
+openpyxl
+pymongo

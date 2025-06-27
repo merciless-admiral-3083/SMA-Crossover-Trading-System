@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMA Crossover Trading Strategy</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+        }
+        .metrics {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .metric {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SMA Crossover Trading Strategy</h1>
+        <img src="data:image/png;base64,{{ plot_url }}" alt="SMA Crossover Plot">
+        
+        <div class="metrics">
+            <div class="metric">
+                <h3>Total Strategy Return</h3>
+                <p>{{ total_strategy_return | round(2) }}</p>
+            </div>
+            <div class="metric">
+                <h3>Total Buy & Hold Return</h3>
+                <p>{{ total_buy_hold_return | round(2) }}</p>
+            </div>
+            <div class="metric">
+                <h3>Sharpe Ratio</h3>
+                <p>{{ sharpe_ratio | round(2) }}</p>
+            </div>
+            <div class="metric">
+                <h3>Max Drawdown</h3>
+                <p>{{ max_drawdown | round(2) }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

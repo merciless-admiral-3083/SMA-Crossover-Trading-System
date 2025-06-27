@@ -1,0 +1,32 @@
+# SMA Crossover Stock Trading System
+
+This project demonstrates a stock trading strategy based on the Simple Moving Average (SMA) crossover technique. It uses Python, Flask, MySQL, and pandas to analyze stock data, visualize trading signals, and display strategy performance metrics on a web dashboard.
+
+## Features
+
+- **Data Import:** Load historical stock data from Excel into a MySQL database.
+- **Strategy Logic:** Calculate 20-day and 50-day SMAs, generate buy/sell signals, and compute returns.
+- **Visualization:** Interactive dashboard showing price, SMAs, buy/sell signals, and key performance metrics.
+- **Testing:** Unit tests for data validation.
+
+## Folder Structure
+
+- `data/` — Place your Excel stock data files here.
+- `database/`
+  - `create_table.sql` — SQL script to create the database and table.
+  - `insert_data.py` — Script to import Excel data into MySQL.
+- `Strategy/`
+  - `moving_average_strategy.py` — Standalone SMA strategy script.
+  - `plot_sma_crossover.py` — Standalone plotting script.
+  - `strategy_performance.py` — Standalone performance metrics script.
+- `templates/`
+  - `index.html` — Flask dashboard template.
+- `tests/`
+  - `test_data_validation.py` — Unit tests for data validation.
+- `app.py` — Main Flask application.
+
+## Setup Instructions
+
+1. **Install Python dependencies:**
+   ```sh
+   pip install -r requirements.txt
