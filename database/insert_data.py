@@ -32,7 +32,7 @@ db = mysql.connector.connect(
 )
 cursor = db.cursor()
 
-truncate = input("Do you want to clear the existing data in the table first? (y/n): ")
+truncate = input("Do you want to clear the existing data in the table first, Jaspreet? (y/n): ")
 if truncate.lower() == 'y':
     cursor.execute("TRUNCATE TABLE stock_data")
 
